@@ -1,0 +1,341 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clothing Shop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icon (optional, for example) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/gobal.css">
+    <link rel="stylesheet" href="CSS/shop.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+
+    <!-- Section 1 -->
+    <section class="first-section">
+        <!-- Header -->
+        <header id="header">
+
+        </header>
+
+</head>
+
+<body>
+    <section class="shop-section">
+        <!-- Category Bar at the Top -->
+        <div class="first-content-area">
+            <div class="category-bar">
+                <label for="category-select">Select Category:</label>
+                <select id="category-select" class="form-select d-inline-block" style="width: auto;">
+                    <option value="all">All</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <div class="row">
+                <!-- Left Sidebar with Category Filters -->
+                <div class="col-md-3 sidebar">
+                    <div class="category-filter">
+                        <h4 class="mt-2 mb-4">Filter</h4>
+                        <div class="category">
+                            <div>
+                                <input type="checkbox" id="category-men" class="category-filter-checkbox"
+                                    data-category="men">
+                                <label for="category-men">Men</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="category-women" class="category-filter-checkbox"
+                                    data-category="women">
+                                <label for="category-women">Women</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="category-kids" class="category-filter-checkbox"
+                                    data-category="kids">
+                                <label for="category-kids">Kids</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="category-accessories" class="category-filter-checkbox"
+                                    data-category="accessories">
+                                <label for="category-accessories">Accessories</label>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="options">
+                            <div>
+                                <input type="checkbox" id="category-shirts" class="category-filter-checkbox"
+                                    data-category="shirts">
+                                <label for="category-shirts">Shirts</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="category-trousers" class="category-filter-checkbox"
+                                    data-category="trousers">
+                                <label for="category-trousers">Trousers</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="kids-underwear" class="category-filter-checkbox"
+                                    data-category="kids-underwear">
+                                <label for="kids-underwear">Underwear</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid Area -->
+                <div class="col-md-9">
+                    <div class="flexbox">
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/mockupData/hat-1/view.webp" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hat 1</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                   
+
+                
+                
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flexbox">
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <a href="viewProduct">
+                                    <div class="card product-card">
+                                        <img src="./assets/img/blank.jpg" alt="Product Image"
+                                            class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Blank image</h5>
+                                            <p class="card-text price">20.00</p>
+                                            <button class="btn-view">View Collection</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                <!-- Pagination -->
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item" id="prev-page">
+                            <a class="page-link" href="#">Previous</a>
+                        </li>
+                        <li class="page-item" id="page-1">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item" id="page-2">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item" id="page-3">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item" id="next-page">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+
+<footer id="footer">
+
+</footer>
+
+
+<!-- JavaScript for interactivity -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script src="JS/gobal.js"></script>
+<script src="JS/header.js"></script>

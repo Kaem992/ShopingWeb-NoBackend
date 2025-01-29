@@ -1,0 +1,246 @@
+
+/* For devices with screen width up to 768px (tablets) */
+@media screen and (max-width: 768px) {
+
+    /* #region First Scetion Banner*/
+    .fullscreen-video-wrapper .banner-caption {
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+    /* #endregion */
+
+    /* #region First Scetion Banner*/
+    .fullscreen-video-wrapper .banner-caption {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        width: vh;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+    
+    .fullscreen-video-wrapper .banner-caption h2 {
+        font-size: 15vw;
+    }
+    
+    .fullscreen-video-wrapper .banner-caption span {
+        font-size: 5vh;
+    }
+    /* #endregion */
+
+
+    /* #region promoted Banner*/
+    .promoted-item .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30vh;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        /* Removes the underline from the link */
+        z-index: 5;
+    }
+
+    /* #endregion */
+
+
+    /* #region Select */
+    .select .flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        box-sizing: border-box;
+        margin: 0px 0px;
+    }
+
+    .select .item {
+        box-sizing: border-box;
+        width: 50%;
+        margin-bottom: 0px;
+        padding: 0px 0px;
+    }
+
+    .select .content::before {
+        content: "";
+        position: absolute;
+        opacity: 0.7;
+        /* Opacity applied only to the background */
+        z-index: -1;
+        /* Keeps the background behind the content */
+    }
+
+    .select .content {
+        color: #2424244d;
+        font-weight: 600;
+        text-align: center;
+        box-sizing: border-box;
+        height: 50vh;
+        padding: 10px;
+
+        position: relative;
+        background-color: rgba(61, 61, 61, 0.295);
+        /* Black overlay with 30% opacity */
+    }
+
+    .content .inner-content {
+        position: absolute;
+        /* Position it relative to .content */
+        top: 40%;
+        /* 60% from the top of the parent */
+        left: 50%;
+        /* Optionally center it horizontally */
+        transform: translateX(-50%);
+        /* Center it horizontally if needed */
+
+        font-size: 30px;
+        /* Adjust the text size (can be changed to your preference) */
+    }
+
+
+
+    /* #endregion */
+
+
+    /* #region New Arrivals */
+    .new-arrivals-title {
+        justify-content: center;
+        text-align: center;
+        padding-top: 3vh;
+    }
+
+    .new-arrivals-heading-1 {
+        display: flex;
+        font-size: 16px;
+        justify-content: right;
+        margin-left: 1vw;
+        margin-right: 20px;
+    }
+
+    .new-arrivals .flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        box-sizing: border-box;
+        margin: 0px -10px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .new-arrivals .item {
+        box-sizing: border-box;
+        width: 50%;
+        margin-bottom: 10px;
+        padding: 0px 10px;
+    }
+
+    .new-arrivals .content {
+        color: #242424;
+        font-weight: 600;
+        text-align: left;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+
+    .new-arrivals .card-img-top {
+        height: 20vh;
+    }
+
+    /* #endregion*/
+
+
+    /* #region About */
+    .about-caption-background {
+        display: None;
+    }
+
+    .fullscreen-video-wrapper .about-caption {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        padding-top: 5vh;
+        width: 85%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: left;
+    }
+
+    .fullscreen-video-wrapper .about-caption h1 {
+        color: rgb(29, 53, 87);
+        margin-bottom: 2%;
+    }
+
+    .fullscreen-video-wrapper .about-caption span {
+        font-size: 100%;
+        /* Adjust this value */
+        line-height: 1.2;
+        /* Adjust the line height to control the space between lines of text */
+    }
+
+    /* #endregion */
+
+
+    /* #region Contact */
+
+    .contact .contact-title {
+        margin-bottom: 1px;
+    }
+
+    .contact .contact-info-item {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .contact .iframe {
+        margin-top: 1vh;
+        width: 100%;
+        height: 40%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+    .contact .contact-info-icon i,
+    .contact .contact-info-icon {
+        font-size: 18px;
+        justify-content: center;
+        /* Center icon and text */
+        margin-bottom: 1px;
+    }
+
+    .contact .contact-info-detail {
+        text-align: center;
+        /* Center contact details */
+        margin-top: 5px;
+    }
+
+    .contact .contact-info-item p,
+    .contact .contact-info-item a {
+        font-size: 16px;
+        /* Slightly smaller font on mobile */
+    }
+
+    /* #endregion */
+}
+
+/* For devices with screen width up to 1024px (larger tablets) */
+@media screen and (max-width: 1024px) {}
+
+/* For devices with screen width larger than 1024px */
+@media screen and (min-width: 1025px) {}
+

@@ -1,0 +1,52 @@
+
+
+.content-section {
+    height: 100vh;
+}
+
+.last-section{
+    height: 100vh;
+}
+
+.carousel,
+    .carousel-item {
+        height: 92vh;
+        object-fit: cover;
+    }
+
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.carousel-caption {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1D3557;
+}
+
+/*PC only*/
+@media screen and (min-width: 1024px) {
+
+    .closebtn {
+        display: none;
+    }
+
+    
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+    .carousel,
+    .carousel-item {
+        height: 100vh;
+        object-fit: cover;
+    }
+}

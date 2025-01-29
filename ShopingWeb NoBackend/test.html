@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Page with Pagination</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .product-card img {
+      max-height: 200px;
+      object-fit: contain;
+    }
+
+    .sidebar {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-right: 1px solid #ddd;
+    }
+
+    .category-filter {
+      margin-bottom: 20px;
+    }
+
+    .category-filter input {
+      margin-right: 5px;
+    }
+
+    .category-bar {
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .category-bar label {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    /* Hide pages initially for pagination */
+    .product-item {
+      display: none;
+    }
+
+    .pagination {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Category Bar at the Top -->
+  <div class="container py-3">
+    <div class="category-bar">
+      <label for="category-select">Select Category:</label>
+      <select id="category-select" class="form-select d-inline-block" style="width: auto;">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="accessories">Accessories</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="container">
+    <div class="row">
+      <!-- Left Sidebar with Category Filters -->
+      <div class="col-md-3 sidebar">
+        <div class="category-filter">
+          <h5>Filter by Category</h5>
+          <div>
+            <input type="checkbox" id="category-electronics" class="category-filter-checkbox" data-category="electronics">
+            <label for="category-electronics">Electronics</label>
+          </div>
+          <div>
+            <input type="checkbox" id="category-clothing" class="category-filter-checkbox" data-category="clothing">
+            <label for="category-clothing">Clothing</label>
+          </div>
+          <div>
+            <input type="checkbox" id="category-accessories" class="category-filter-checkbox" data-category="accessories">
+            <label for="category-accessories">Accessories</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid Area -->
+      <div class="col-md-9">
+        <div class="row" id="product-grid">
+          <!-- Product Item 1 -->
+          <div class="col-md-4 product-item" data-category="electronics">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <p class="card-text">$20.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 1" data-price="20.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 2 -->
+          <div class="col-md-4 product-item" data-category="clothing">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 2</h5>
+                <p class="card-text">$35.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 2" data-price="35.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 3 -->
+          <div class="col-md-4 product-item" data-category="accessories">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 3</h5>
+                <p class="card-text">$50.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 3" data-price="50.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 4 -->
+          <div class="col-md-4 product-item" data-category="electronics">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 4</h5>
+                <p class="card-text">$40.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 4" data-price="40.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 5 -->
+          <div class="col-md-4 product-item" data-category="clothing">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 5</h5>
+                <p class="card-text">$25.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 5" data-price="25.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 6 -->
+          <div class="col-md-4 product-item" data-category="accessories">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 6</h5>
+                <p class="card-text">$60.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 6" data-price="60.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Item 7 -->
+          <div class="col-md-4 product-item" data-category="electronics">
+            <div class="card product-card">
+              <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Product 7</h5>
+                <p class="card-text">$30.00</p>
+                <button class="btn btn-primary add-to-cart" data-product="Product 7" data-price="30.00">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product Item 7 -->
+        <div class="col-md-4 product-item" data-category="electronics">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Product 7</h5>
+              <p class="card-text">$30.00</p>
+              <button class="btn btn-primary add-to-cart" data-product="Product 7" data-price="30.00">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 product-item" data-category="electronics">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Product 7</h5>
+              <p class="card-text">$30.00</p>
+              <button class="btn btn-primary add-to-cart" data-product="Product 7" data-price="30.00">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 product-item" data-category="electronics">
+          <div class="card product-card">
+            <img src="https://via.placeholder.com/200" alt="Product Image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Product 7</h5>
+              <p class="card-text">$30.00</p>
+              <button class="btn btn-primary add-to-cart" data-product="Product 7" data-price="30.00">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+        <!-- Pagination -->
+        <nav>
+          <ul class="pagination">
+            <li class="page-item" id="prev-page">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item" id="page-1">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item" id="page-2">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item" id="page-3">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item" id="next-page">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for interactivity -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      const productsPerPage = 3;
+      let currentPage = 1;
+      const totalProducts = $('.product-item').length;
+      const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+      function showPage(page) {
+        $('.product-item').hide();
+        const start = (page - 1) * productsPerPage;
+        const end = start + productsPerPage;
+        $('.product-item').slice(start, end).show();
+        currentPage = page;
+        updatePagination();
+      }
+
+      function updatePagination() {
+        $('.pagination .page-item').removeClass('active');
+        $('#page-' + currentPage).addClass('active');
+
+        if (currentPage === 1) {
+          $('#prev-page').addClass('disabled');
+        } else {
+          $('#prev-page').removeClass('disabled');
+        }
+
+        if (currentPage === totalPages) {
+          $('#next-page').addClass('disabled');
+        } else {
+          $('#next-page').removeClass('disabled');
+        }
+      }
+
+      $('#prev-page').click(function () {
+        if (currentPage > 1) {
+          showPage(currentPage - 1);
+        }
+      });
+
+      $('#next-page').click(function () {
+        if (currentPage < totalPages) {
+          showPage(currentPage + 1);
+        }
+      });
+
+      $('.page-item').click(function () {
+        const page = $(this).text();
+        if (page >= 1 && page <= totalPages) {
+          showPage(parseInt(page));
+        }
+      });
+
+      // Initial page load
+      showPage(currentPage);
+    });
+  </script>
+
+</body>
+
+</html>
